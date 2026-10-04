@@ -1,11 +1,11 @@
 <div align="center">
-  <img src="assets/banner.png" alt="MintAlphaX — alpha where Synthetic Intelligence meets Crypto" width="100%">
+  <img src="assets/banner.png" alt="MintAlphaX — alpha where Super Intelligence meets Crypto" width="100%">
 </div>
 
 # ⛏️ MintAlphaX · 硅基掘金
 
-**Prospecting for alpha where Synthetic Intelligence meets Crypto.**
-**在硅基智能（SI）与 Crypto 的融合处挖掘 alpha 机会，顺手打造日常实用的小工具。**
+**Prospecting for alpha where Super Intelligence meets Crypto.**
+**在超级智能（SI）与 Crypto 的融合处挖掘 alpha 机会，顺手打造日常实用的小工具。**
 
 The best trades at the AI × Crypto frontier are backed by instruments you
 build yourself — so this profile is half research desk, half workshop.
