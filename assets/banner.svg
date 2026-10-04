@@ -1,58 +1,98 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320">
   <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0E171F"/>
+      <stop offset="1" stop-color="#0A1015"/>
+    </linearGradient>
     <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#FFE08A"/>
-      <stop offset="0.5" stop-color="#F0B90B"/>
-      <stop offset="1" stop-color="#C98A00"/>
+      <stop offset="0" stop-color="#F7D77E"/>
+      <stop offset="0.5" stop-color="#E8B33B"/>
+      <stop offset="1" stop-color="#B07E14"/>
     </linearGradient>
-    <linearGradient id="goldText" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#FFE08A"/>
-      <stop offset="1" stop-color="#E8A800"/>
-    </linearGradient>
-    <radialGradient id="bg" cx="0.3" cy="0.2" r="1.2">
-      <stop offset="0" stop-color="#161D2E"/>
-      <stop offset="0.55" stop-color="#101624"/>
-      <stop offset="1" stop-color="#0D1117"/>
+    <radialGradient id="coinGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#F0B95A" stop-opacity="0.4"/>
+      <stop offset="0.6" stop-color="#E8B33B" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#E8B33B" stop-opacity="0"/>
     </radialGradient>
   </defs>
 
   <rect width="1280" height="320" fill="url(#bg)"/>
 
-  <!-- faint circuit bus along the bottom -->
-  <g stroke="#1D2431" stroke-width="3" fill="none">
-    <path d="M 40 292 H 1240"/>
-    <path d="M 620 292 V 262 H 760"/>
-    <path d="M 900 292 V 268 H 1020"/>
-    <path d="M 1120 292 V 256 H 1210"/>
+  <!-- mint pcb traces, left cluster -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="#7FD9BC" stroke-width="8" opacity="0.22">
+      <path d="M 30 70 H 190 L 230 110 H 300"/>
+      <path d="M 30 130 H 130 L 170 170 H 250"/>
+      <path d="M 60 250 H 200 L 240 210 H 320"/>
+      <path d="M 30 290 H 170"/>
+      <path d="M 470 300 V 270 L 500 240"/>
+    </g>
+    <g stroke="#9BF0D2" stroke-width="3">
+      <path d="M 30 70 H 190 L 230 110 H 300"/>
+      <path d="M 30 130 H 130 L 170 170 H 250"/>
+      <path d="M 60 250 H 200 L 240 210 H 320"/>
+      <path d="M 30 290 H 170"/>
+      <path d="M 470 300 V 270 L 500 240"/>
+    </g>
   </g>
-  <g fill="#58A6FF" opacity="0.85">
-    <circle cx="760" cy="262" r="5"/>
-    <circle cx="1020" cy="268" r="5"/>
-    <circle cx="1210" cy="256" r="5"/>
+  <g fill="#9BF0D2" opacity="0.95">
+    <circle cx="300" cy="110" r="5"/>
+    <circle cx="250" cy="170" r="5"/>
+    <circle cx="320" cy="210" r="5"/>
+    <circle cx="170" cy="290" r="5"/>
+    <circle cx="500" cy="240" r="5"/>
   </g>
 
-  <!-- watermark alpha, right side -->
-  <g transform="translate(980,-30) scale(0.8)" opacity="0.06">
-    <ellipse cx="225" cy="268" rx="78" ry="70" fill="none" stroke="#F0B90B" stroke-width="34"/>
-    <path d="M 306 196 C 388 204 378 330 262 338" fill="none" stroke="#F0B90B" stroke-width="34" stroke-linecap="round"/>
+  <!-- mint pcb traces, right cluster -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="#7FD9BC" stroke-width="8" opacity="0.22">
+      <path d="M 1250 60 H 1120 L 1080 100"/>
+      <path d="M 1250 250 H 1180"/>
+      <path d="M 900 300 L 940 260 H 1030"/>
+      <path d="M 1250 290 H 1150"/>
+    </g>
+    <g stroke="#9BF0D2" stroke-width="3">
+      <path d="M 1250 60 H 1120 L 1080 100"/>
+      <path d="M 1250 250 H 1180"/>
+      <path d="M 900 300 L 940 260 H 1030"/>
+      <path d="M 1250 290 H 1150"/>
+    </g>
+  </g>
+  <g fill="#9BF0D2" opacity="0.95">
+    <circle cx="1080" cy="100" r="5"/>
+    <circle cx="1180" cy="250" r="5"/>
+    <circle cx="1030" cy="260" r="5"/>
+    <circle cx="1150" cy="290" r="5"/>
   </g>
 
-  <!-- alpha mark -->
-  <g transform="translate(30,10) scale(0.55)">
-    <ellipse cx="225" cy="268" rx="78" ry="70" fill="none" stroke="url(#gold)" stroke-width="34"/>
-    <path d="M 306 196 C 388 204 378 330 262 338"
-          fill="none" stroke="url(#gold)" stroke-width="34" stroke-linecap="round"/>
-    <circle cx="346" cy="382" r="12" fill="url(#gold)"/>
-    <circle cx="370" cy="402" r="8" fill="url(#gold)"/>
-    <circle cx="390" cy="420" r="5.5" fill="url(#gold)"/>
+  <!-- faint traces behind the text -->
+  <g fill="none" stroke="#7FD9BC" stroke-width="3" opacity="0.12" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 40 30 H 600 L 640 70 H 900"/>
+    <path d="M 380 310 H 700 L 740 270 H 1240"/>
   </g>
+
+  <!-- glowing gold coin, right -->
+  <circle cx="1092" cy="160" r="130" fill="url(#coinGlow)"/>
+  <circle cx="1092" cy="160" r="72" fill="url(#gold)"/>
+  <circle cx="1092" cy="160" r="66" fill="none" stroke="#8A6410" stroke-width="5"
+          stroke-dasharray="3.5 6.5" opacity="0.75"/>
+  <circle cx="1092" cy="160" r="52" fill="#0B1218" stroke="#E8B33B" stroke-width="2"/>
+  <g transform="translate(1026,106) scale(0.245)" fill="none" stroke="url(#gold)" stroke-width="52">
+    <ellipse cx="225" cy="268" rx="78" ry="70"/>
+    <path d="M 306 196 C 388 204 378 330 262 338" stroke-linecap="round"/>
+  </g>
+  <!-- coin connected into the circuit -->
+  <path d="M 1016 160 H 950" fill="none" stroke="#9BF0D2" stroke-width="3" opacity="0.9"/>
+  <circle cx="944" cy="160" r="5" fill="#9BF0D2"/>
 
   <!-- wordmark -->
-  <text x="310" y="142" font-family="Menlo, Consolas, 'Courier New', monospace"
-        font-size="62" font-weight="bold" letter-spacing="6"
-        fill="url(#goldText)">MINTALPHAX</text>
-  <text x="314" y="192" font-family="Menlo, Consolas, 'Courier New', monospace"
-        font-size="22" letter-spacing="2" fill="#8B949E">ALPHA AT THE SILICON &#215; CRYPTO SEAM</text>
-  <text x="314" y="234" font-family="'PingFang SC', 'Hiragino Sans GB', sans-serif"
-        font-size="23" letter-spacing="1" fill="#6E7681">硅基掘金 · 挖 alpha，造工具</text>
+  <g text-anchor="middle">
+    <text x="560" y="138" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+          font-size="62" font-weight="bold" letter-spacing="6"
+          fill="#F2F7F5">MINTALPHAX</text>
+    <text x="560" y="186" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+          font-size="21" letter-spacing="3" fill="#8FE3C4">WHERE SYNTHETIC INTELLIGENCE MEETS CRYPTO</text>
+    <text x="560" y="228" font-family="'PingFang SC', 'Hiragino Sans GB', sans-serif"
+          font-size="21" letter-spacing="1" fill="#6E808C">硅基掘金 · 挖 alpha，造工具</text>
+  </g>
 </svg>
